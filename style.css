@@ -1,0 +1,42 @@
+.visible {
+    display: block;
+}
+
+.invisible {
+    display: none;
+}
+
+.homeScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: blue;
+    height: 500px;
+    width: 800px;
+}
+
+#startButton {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.jumpingGameScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background-color: pink;
+    height: 500px;
+    width: 800px;
+}
