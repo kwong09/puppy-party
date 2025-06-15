@@ -11,6 +11,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: block;
 
     background-color: blue;
     height: 500px;
@@ -18,7 +19,7 @@
 }
 
 #startButton {
-    position: fixed;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -35,8 +36,47 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: none;
+    overflow: hidden;
     
     background-color: pink;
     height: 500px;
     width: 800px;
+}
+
+#jumpingCharacter {
+    width: 50px;
+    height: 150px;
+    background-color: white;
+    position: relative;
+    top: 500px;
+    left: 50px;
+    transform: translate(0%, -100%);
+}
+
+#jumpingObstacle1 {
+    width: 40px;
+    height: 40px;
+    background-color: blue;
+    position: relative;
+    top: 350px;
+    left: 800px;
+    transform: translate(0%, -100%);
+    animation: jumpingObstacleAni 1.6s infinite linear;
+}
+
+@keyframes jumpingObstacleAni {
+    0%{left: 850px;}
+    100%{left: -50px;}
+}
+
+@keyframes jumpingCharacterAni {
+    0%{top:500px;}
+    40%{top:400px;}
+    70%{top:400px;}
+    100%{top:500px;}
+}
+
+.jumpingCharacterAni {
+    animation: jumpingCharacterAni 0.5s linear;
 }

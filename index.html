@@ -8,10 +8,13 @@
 </head>
 
 <body>
-    <div class="homeScreen visible">
+    <div class="homeScreen">
         <button onclick="invisible(homeScreen); visible(jumpingGameScreen)" id="startButton">Start</button>
     </div>
-    <div class="jumpingGameScreen invisible"></div>
+    <div class="jumpingGameScreen" onclick="jumpingCharacterAni(jumpingCharacter)">
+        <div id="jumpingCharacter"></div>
+        <div id="jumpingObstacle1"></div>
+    </div>
 </body>
 
 <script src="script.js"></script>
