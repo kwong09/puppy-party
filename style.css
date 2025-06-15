@@ -1,3 +1,11 @@
+/* fonts */
+p {
+    font-family: 'Archivo';
+    font-size: 20px;
+}
+
+
+
 .visible {
     display: block;
 }
@@ -31,6 +39,18 @@
     padding-bottom: 10px;
 }
 
+.menuScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+
+    background-color: lavender;
+    height: 500px;
+    width: 800px;
+}
+
 .jumpingGameScreen {
     position: fixed;
     top: 50%;
@@ -39,30 +59,42 @@
     display: none;
     overflow: hidden;
     
-    background-color: pink;
+    background-image: url('/assets/cloudBackground.png');
     height: 500px;
     width: 800px;
 }
 
+.jumpingGameScreen p {
+    text-align: center;
+    vertical-align: top;
+}
+
 #jumpingCharacter {
-    width: 50px;
+    width: 150px;
     height: 150px;
-    background-color: white;
     position: relative;
     top: 500px;
     left: 50px;
     transform: translate(0%, -100%);
 }
 
+img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 #jumpingObstacle1 {
-    width: 40px;
-    height: 40px;
-    background-color: blue;
+    width: 60px;
+    height: 60px;
+    background-image: url('/assets/jumpingObstacle1.png');
+    background-size: cover;
     position: relative;
     top: 350px;
-    left: 800px;
+    left: -10px;
     transform: translate(0%, -100%);
-    animation: jumpingObstacleAni 1.6s infinite linear;
+    animation: jumpingObstacleAni 1.2s infinite linear;
 }
 
 @keyframes jumpingObstacleAni {
@@ -72,11 +104,25 @@
 
 @keyframes jumpingCharacterAni {
     0%{top:500px;}
-    40%{top:400px;}
-    70%{top:400px;}
+    20%{top:300px;}
+    80%{top:300px;}
     100%{top:500px;}
 }
 
 .jumpingCharacterAni {
-    animation: jumpingCharacterAni 0.5s linear;
+    animation: jumpingCharacterAni 2s linear;
+}
+
+
+.winScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    overflow: hidden;
+    
+    background-color: greenyellow;
+    height: 500px;
+    width: 800px;
 }

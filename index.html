@@ -5,16 +5,27 @@
     <meta charset="UTF-8">
     <title>Puppy Party</title>
     <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="homeScreen">
-        <button onclick="invisible(homeScreen); visible(jumpingGameScreen)" id="startButton">Start</button>
+        <button onclick="invisible(homeScreen); visible(menuScreen)" id="startButton">Start</button>
+    </div>
+    <div class="menuScreen">
+        <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">bouquet</button>
     </div>
     <div class="jumpingGameScreen" onclick="jumpingCharacterAni(jumpingCharacter)">
-        <div id="jumpingCharacter"></div>
-        <div id="jumpingObstacle1"></div>
+        <div>
+            <div id="jumpingCharacter"><img src='/assets/jumpingCharacter.gif'></div>
+            <div id="jumpingObstacle1"></div>
+        </div>
+        <p>Countdown Timer: <span id="jumpingGameScore"></span></p>
     </div>
+    <div class="winScreen"></div>
 </body>
 
 <script src="script.js"></script>
