@@ -1,6 +1,7 @@
 var homeScreen = document.querySelector(".homeScreen");
 var menuScreen = document.querySelector(".menuScreen");
 var jumpingGameScreen = document.querySelector(".jumpingGameScreen");
+var collectingGameScreen = document.querySelector(".collectingGameScreen");
 var winScreen = document.querySelector(".winScreen");
 var jumpingCharacter = document.getElementById("jumpingCharacter");
 var jumpingObstacle1 = document.getElementById("jumpingObstacle1");
@@ -35,10 +36,21 @@ function visible(screen) {
         if (jumpingTimerMath>20) {
             jumpingObstacle1.style.animation = "none";
             jumpingCharacter.style.animation = "none";
+            clearInterval(jumpingPoints);
             invisible(jumpingGameScreen);
             visible(winScreen);
         }
         }, 10);
+    }
+
+    if (screen.classList.contains("collectingGameScreen")) {
+        const collectingObstacle1 = document.getElementById("collectingObstacle1");
+
+        addEventListener("animationiteration", () => {
+            let randomLocation = Math.floor(Math.random() * (700 - 10 + 1)) + 10;
+
+            collectingObstacle1.style.left = `${randomLocation}px`
+        })
     }
 }
 

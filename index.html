@@ -16,7 +16,10 @@
         <button onclick="invisible(homeScreen); visible(menuScreen)" id="startButton">Start</button>
     </div>
     <div class="menuScreen">
-        <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">bouquet</button>
+        <img src="/assets/jumpingObstacle1.png" onclick="invisible(menuScreen); visible(jumpingGameScreen)">
+        <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">outfit</button>
+        <button onclick="invisible(menuScreen); visible(collectingGameScreen)" id="startButton">cake</button>
+        <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">gift</button>
     </div>
     <div class="jumpingGameScreen" onclick="jumpingCharacterAni(jumpingCharacter)">
         <div>
@@ -25,7 +28,15 @@
         </div>
         <p>Countdown Timer: <span id="jumpingGameScore"></span></p>
     </div>
-    <div class="winScreen"></div>
+    <div class="collectingGameScreen">
+        <div>
+            <div id="collectingCharacter"></div>
+            <div id="collectingObstacle1"></div>
+        </div>
+    </div>
+    <div class="winScreen">
+        <button onclick="invisible(winScreen); visible(menuScreen)" id="menuButton">menu</button>
+    </div>
 </body>
 
 <script src="script.js"></script>
