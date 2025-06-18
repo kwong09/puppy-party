@@ -153,12 +153,12 @@ img {
 
 
 #collectingCharacter {
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
     background-color: white;
     position: relative;
     top: 500px;
-    left: 50px;
+    left: 150px;
     transform: translate(0%, -100%);
 }
 
