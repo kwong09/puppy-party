@@ -180,3 +180,59 @@ img {
     0% {top: -150px};
     100% {top: 500px};
 }
+
+.clickDragGameScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    overflow: hidden;
+    
+    background-color: blanchedalmond;
+    height: 500px;
+    width: 800px;
+}
+
+#giftBasket {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    position: relative;
+    top: 170px;
+    left: 100px;
+}
+
+#giftItem1, #giftItem2, #giftItem3, #giftItem4, #giftItem5 {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    background-color: pink;
+    cursor: grab;
+}
+
+#giftItem1 {
+    top: 150px;
+    left: 470px;
+
+}
+
+#giftItem2 {
+    top: 270px;
+    left: 470px;
+}
+
+#giftItem3 {
+    top: 390px;
+    left: 470px;
+}
+
+#giftItem4 {
+    top: 200px;
+    left: 600px;
+}
+
+#giftItem5 {
+    top: 330px;
+    left: 600px;
+}

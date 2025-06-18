@@ -2,6 +2,7 @@ var homeScreen = document.querySelector(".homeScreen");
 var menuScreen = document.querySelector(".menuScreen");
 var jumpingGameScreen = document.querySelector(".jumpingGameScreen");
 var collectingGameScreen = document.querySelector(".collectingGameScreen");
+var clickDragGameScreen = document.querySelector(".clickDragGameScreen");
 var winScreen = document.querySelector(".winScreen");
 var jumpingCharacter = document.getElementById("jumpingCharacter");
 var jumpingObstacle1 = document.getElementById("jumpingObstacle1");
@@ -9,8 +10,11 @@ var jumpingObstacle1 = document.getElementById("jumpingObstacle1");
 var collectingCharacter = document.getElementById("collectingCharacter");
 var collectingObstacle1 = document.getElementById("collectingObstacle1");
 
+var giftOrder = 1;
 
 var screen, jumpingTimer = 0, collectingScore = 0;
+
+
 function invisible(screen) {
     screen.style.display = "none";
 }
@@ -61,13 +65,10 @@ function visible(screen) {
             let collectingObstacleLeft = parseInt(window.getComputedStyle(collectingObstacle1).getPropertyValue("left"));
             let collectingCharacterLeft = parseInt(window.getComputedStyle(collectingCharacter).getPropertyValue("left"));
 
-            if (canCollect 
-                &&collectingObstacleTop >= 320 && collectingObstacleTop <= 500
+
+            if (collectingObstacleTop >= 320 && collectingObstacleTop <= 500
                 && collectingObstacleLeft > collectingCharacterLeft - 60
                 && collectingObstacleLeft < collectingCharacterLeft + 90) {
-
-                canCollect = false;
-
                 collectingScore++;
                 collectingObstacle1.style.animation = 'none';
                 collectingObstacle1.offsetHeight;
@@ -77,9 +78,13 @@ function visible(screen) {
 
                 collectingObstacle1.style.left = `${randomLocation}px`;
 
-                setTimeout(() => {
-                    canCollect = true;
-                }, 20);
+                document.getElementById("collectingGameScore").innerHTML = collectingScore;
+            }
+
+            if (collectingScore >= 15) {
+                invisible(collectingGameScreen);
+                visible(winScreen);
+                clearInterval(collectingInterval);
             }
         }, 50);
 
@@ -124,6 +129,21 @@ function visible(screen) {
             }
         })
     }
+
+
+    if (screen.classList.contains("clickDragGameScreen")) {
+        var giftItem1 = document.getElementById("giftItem1");
+
+        if (giftOrder === 1) {
+            draggingItem(giftItem1);
+        }
+
+        if (giftOrder > 5) {
+            invisible(clickDragGameScreen);
+            visible(winScreen);
+        }
+
+    }
 }
 
 function jumpingCharacterAni(character) {
@@ -134,3 +154,61 @@ function jumpingCharacterAni(character) {
     }, 500);
 }
 
+
+function draggingItem(giftItem) {
+    var isDragging = false;
+
+    document.addEventListener("mousedown", (k) => {
+        giftItem.style.cursor = "grabbing";
+        isDragging = true;
+    })
+
+    document.addEventListener("mousemove", (k) => {
+        var giftBasket = document.getElementById("giftBasket");
+        var giftBasketBoundary = giftBasket.getBoundingClientRect();
+        var giftItemBoundary = giftItem.getBoundingClientRect();
+
+        var giftItem2 = document.getElementById("giftItem2");
+        var giftItem3 = document.getElementById("giftItem3");
+        var giftItem4 = document.getElementById("giftItem4");
+        var giftItem5 = document.getElementById("giftItem5");
+
+        if (isDragging){
+            giftItem.style.top = (k.clientY - 130) + "px"
+            giftItem.style.left = (k.clientX - 350) + "px"
+            
+            if (giftItemBoundary.left < giftBasketBoundary.right &&
+                giftItemBoundary.right > giftBasketBoundary.left &&
+                giftItemBoundary.top < giftBasketBoundary.bottom &&
+                giftItemBoundary.bottom > giftBasketBoundary.top) {
+                invisible(giftItem);
+                giftBasket.style.backgroundColor = "green";
+                giftOrder++;
+
+
+                if (giftOrder === 2) {
+                    draggingItem(giftItem2);
+                }
+                if (giftOrder === 3) {
+                    draggingItem(giftItem3);
+                }
+                if (giftOrder === 4) {
+                    draggingItem(giftItem4);
+                }
+                if (giftOrder === 5) {
+                    draggingItem(giftItem5);
+                }
+
+                if (giftOrder > 5) {
+                    invisible(clickDragGameScreen);
+                    visible(winScreen);
+                }
+            }
+        }
+    })
+
+    document.addEventListener("mouseup", (k) => {
+        giftItem.style.cursor = "grab";
+        isDragging = false;
+    })
+}

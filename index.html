@@ -19,19 +19,30 @@
         <img src="/assets/jumpingObstacle1.png" onclick="invisible(menuScreen); visible(jumpingGameScreen)">
         <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">outfit</button>
         <button onclick="invisible(menuScreen); visible(collectingGameScreen)" id="startButton">cake</button>
-        <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">gift</button>
+        <button onclick="invisible(menuScreen); visible(clickDragGameScreen)" id="startButton">gift</button>
     </div>
     <div class="jumpingGameScreen" onclick="jumpingCharacterAni(jumpingCharacter)">
         <div>
             <div id="jumpingCharacter"><img src='/assets/jumpingCharacter.gif'></div>
             <div id="jumpingObstacle1"></div>
         </div>
-        <p>Countdown Timer: <span id="jumpingGameScore"></span></p>
+        <p>Timer: <span id="jumpingGameScore"></span></p>
     </div>
     <div class="collectingGameScreen">
         <div>
             <div id="collectingCharacter"></div>
             <div id="collectingObstacle1"></div>
+        </div>
+        <p>Score: <span id="collectingGameScore"></span></p>
+    </div>
+    <div class="clickDragGameScreen">
+        <div>
+            <div id="giftBasket"></div>
+            <div id="giftItem1"></div>
+            <div id="giftItem2"></div>
+            <div id="giftItem3"></div>
+            <div id="giftItem4"></div>
+            <div id="giftItem5"></div>
         </div>
     </div>
     <div class="winScreen">
