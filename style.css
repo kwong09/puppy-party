@@ -84,7 +84,8 @@ p {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/cloudBackground.png');
+    background-image: url('/assets/fieldBackground.png');
+    background-size: cover;
     height: 500px;
     width: 800px;
 }
@@ -332,5 +333,36 @@ img {
     position: absolute;
     top: 375px;
     left: 675px;
+    cursor: pointer;
+}
+
+
+
+
+
+.instructionsScreen {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    overflow: hidden;
+    
+    background-image: url('/assets/outfitInstructions.png');
+    background-size: cover;
+    height: 500px;
+    width: 800px;
+}
+
+#nextButton {
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    background-color: white;
+    left: 720px;
+    top: 375px;
+
+    background-image: url('/assets/nextButton.png');
+    background-size: cover;
     cursor: pointer;
 }

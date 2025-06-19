@@ -5,6 +5,7 @@ var collectingGameScreen = document.querySelector(".collectingGameScreen");
 var clickDragGameScreen = document.querySelector(".clickDragGameScreen");
 var outfitGameScreen = document.querySelector(".outfitGameScreen");
 var winScreen = document.querySelector(".winScreen");
+var instructionsScreen = document.querySelector(".instructionsScreen");
 var jumpingCharacter = document.getElementById("jumpingCharacter");
 var jumpingObstacle1 = document.getElementById("jumpingObstacle1");
 
@@ -34,8 +35,64 @@ function invisible(screen) {
     screen.style.display = "none";
 }
 
+
+var jumpingStartButton = document.getElementById("jumpingStartButton");
+var collectingStartButton = document.getElementById("collectingStartButton");
+var outfitStartButton = document.getElementById("outfitStartButton");
+var giftStartButton = document.getElementById("giftStartButton");
+var nextButton = document.getElementById("nextButton");
+let currentGame = "bobross";
+
+jumpingStartButton.addEventListener('click', () => {
+    instructionsScreen.style.backgroundImage = 'url(/assets/jumpingInstructions.png';
+    currentGame = "jumping game";
+    invisible(menuScreen);
+    visible(instructionsScreen);
+})
+
+collectingStartButton.addEventListener('click', () => {
+    instructionsScreen.style.backgroundImage = 'url(/assets/collectingInstructions.png';
+    currentGame = "collecting game";
+    invisible(menuScreen);
+    visible(instructionsScreen);
+})
+
+outfitStartButton.addEventListener('click', () => {
+    instructionsScreen.style.backgroundImage = 'url(/assets/outfitInstructions.png';
+    currentGame = "outfit game";
+    invisible(menuScreen);
+    visible(instructionsScreen);
+})
+
+giftStartButton.addEventListener('click', () => {
+    instructionsScreen.style.backgroundImage = 'url(/assets/giftInstructions.png';
+    currentGame = "gift game";
+    invisible(menuScreen);
+    visible(instructionsScreen);
+})
+
+nextButton.addEventListener('click', () => {
+    invisible(instructionsScreen);
+    if (currentGame === "jumping game") {
+        visible(jumpingGameScreen);
+    };
+    if (currentGame === "outfit game") {
+        visible(outfitGameScreen);
+    };
+    if (currentGame === "collecting game") {
+        visible(collectingGameScreen);
+    };
+    if (currentGame === "gift game") {
+        visible(clickDragGameScreen);
+    };
+})
+
 function visible(screen) {
     screen.style.display = "block";
+
+    if (screen.classList.contains("instructionsScreen")) {
+        
+    }
 
     if (screen.classList.contains("jumpingGameScreen")) {
         var jumpingPoints = setInterval(function() {
