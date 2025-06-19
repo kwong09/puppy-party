@@ -17,7 +17,7 @@
     </div>
     <div class="menuScreen">
         <img src="/assets/jumpingObstacle1.png" onclick="invisible(menuScreen); visible(jumpingGameScreen)">
-        <button onclick="invisible(menuScreen); visible(jumpingGameScreen)" id="startButton">outfit</button>
+        <button onclick="invisible(menuScreen); visible(outfitGameScreen)" id="startButton">outfit</button>
         <button onclick="invisible(menuScreen); visible(collectingGameScreen)" id="startButton">cake</button>
         <button onclick="invisible(menuScreen); visible(clickDragGameScreen)" id="startButton">gift</button>
     </div>
@@ -43,6 +43,17 @@
             <div id="giftItem3"></div>
             <div id="giftItem4"></div>
             <div id="giftItem5"></div>
+        </div>
+    </div>
+    <div class="outfitGameScreen">
+        <div>
+            <div id="baseCharacter"></div>
+            <div id="hatSelection"></div>
+            <div id="outfitSelection"></div>
+            <div id="hatRight" onclick="outfitGameButtons('hatRight')"></div>
+            <div id="hatLeft" onclick="outfitGameButtons('hatLeft')"></div>
+            <div id="outfitRight" onclick="outfitGameButtons('outfitRight')"></div>
+            <div id="outfitLeft" onclick="outfitGameButtons('outfitLeft')"></div>
         </div>
     </div>
     <div class="winScreen">
