@@ -10,6 +10,8 @@ var jumpingObstacle1 = document.getElementById("jumpingObstacle1");
 
 var collectingCharacter = document.getElementById("collectingCharacter");
 var collectingObstacle1 = document.getElementById("collectingObstacle1");
+var ingredientList = ["/assets/eggIngredient.png", "/assets/flourIngredient.png", "/assets/milkIngredient.png", "/assets/saltIngredient.png", "/assets/butterIngredient.png"];
+var ingredientOrder = 0;
 
 var giftOrder = 1;
 
@@ -72,11 +74,21 @@ function visible(screen) {
 
     if (screen.classList.contains("collectingGameScreen")) {
 
-        document.addEventListener("animationiteration", () => {
+        collectingObstacle1.addEventListener("animationiteration", () => {
             let randomLocation = Math.floor(Math.random() * (700 - 10 + 1)) + 10;
 
             collectingObstacle1.style.left = `${randomLocation}px`;
-        })
+
+            if (ingredientOrder>4) {
+                ingredientOrder = 0;
+                let ingredientImage = ingredientList[ingredientOrder];
+                collectingObstacle1.style.backgroundImage = 'url(' + ingredientImage + ')'
+            } else {
+                ingredientOrder++;
+                let ingredientImage = ingredientList[ingredientOrder];
+                collectingObstacle1.style.backgroundImage = 'url(' + ingredientImage + ')'
+            }
+        });
         
         var canCollect = true;
 
@@ -86,7 +98,7 @@ function visible(screen) {
             let collectingCharacterLeft = parseInt(window.getComputedStyle(collectingCharacter).getPropertyValue("left"));
 
 
-            if (collectingObstacleTop >= 320 && collectingObstacleTop <= 500
+            if (collectingObstacleTop >= 250 && collectingObstacleTop <= 500
                 && collectingObstacleLeft > collectingCharacterLeft - 60
                 && collectingObstacleLeft < collectingCharacterLeft + 90) {
                 collectingScore++;
@@ -99,6 +111,16 @@ function visible(screen) {
                 collectingObstacle1.style.left = `${randomLocation}px`;
 
                 document.getElementById("collectingGameScore").innerHTML = collectingScore;
+
+                if (ingredientOrder>=4) {
+                    ingredientOrder = 0;
+                    let ingredientImage = ingredientList[ingredientOrder];
+                    collectingObstacle1.style.backgroundImage = 'url(' + ingredientImage + ')'
+                } else {
+                    ingredientOrder++;
+                    let ingredientImage = ingredientList[ingredientOrder];
+                    collectingObstacle1.style.backgroundImage = 'url(' + ingredientImage + ')'
+                }
             }
 
             if (collectingScore >= 15) {
@@ -247,11 +269,11 @@ function outfitGameButtons(button) {
     if (button === "outfitRight") {
         if (outfitOrder >= 3) {
             outfitOrder = 0;
-            outfitSelected = outfitList[outfitOrder];
+            let outfitSelected = outfitList[outfitOrder];
             outfitSelection.style.backgroundColor = outfitSelected;
         } else {
             outfitOrder++;
-            outfitSelected = outfitList[outfitOrder];
+            let outfitSelected = outfitList[outfitOrder];
             outfitSelection.style.backgroundColor = outfitSelected;
         }
     }
@@ -259,11 +281,11 @@ function outfitGameButtons(button) {
     if (button === "outfitLeft") {
         if (outfitOrder <= 0) {
             outfitOrder = 3;
-            outfitSelected = outfitList[outfitOrder];
+            let outfitSelected = outfitList[outfitOrder];
             outfitSelection.style.backgroundColor = outfitSelected;
         } else {
             outfitOrder--;
-            outfitSelected = outfitList[outfitOrder];
+            let outfitSelected = outfitList[outfitOrder];
             outfitSelection.style.backgroundColor = outfitSelected;
         }
     }
@@ -271,11 +293,11 @@ function outfitGameButtons(button) {
     if (button === "hatRight") {
         if (hatOrder >= 3) {
             hatOrder = 0;
-            hatSelected = hatList[hatOrder];
+            let hatSelected = hatList[hatOrder];
             hatSelection.style.backgroundColor = hatSelected;
         } else {
             hatOrder++;
-            hatSelected = hatList[hatOrder];
+            let hatSelected = hatList[hatOrder];
             hatSelection.style.backgroundColor = hatSelected;
         }
     }
@@ -283,11 +305,11 @@ function outfitGameButtons(button) {
     if (button === "hatLeft") {
         if (hatOrder <= 0) {
             hatOrder = 3;
-            hatSelected = hatList[hatOrder];
+            let hatSelected = hatList[hatOrder];
             hatSelection.style.backgroundColor = hatSelected;
         } else {
             hatOrder--;
-            hatSelected = hatList[hatOrder];
+            let hatSelected = hatList[hatOrder];
             hatSelection.style.backgroundColor = hatSelected;
         }
     }

@@ -1,7 +1,23 @@
 /* fonts */
 p {
     font-family: 'Archivo';
-    font-size: 20px;
+    font-size: 30px;
+    text-align: center;
+
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+}
+
+#scoreBackground {
+    position: fixed;
+    left: 50%;
+    top: 20px;
+    transform: translate(-50%);
+
+    height: 90px;
+    width: auto;
 }
 
 
@@ -73,11 +89,6 @@ p {
     width: 800px;
 }
 
-.jumpingGameScreen p {
-    text-align: center;
-    vertical-align: top;
-}
-
 #jumpingCharacter {
     width: 150px;
     height: 150px;
@@ -145,7 +156,8 @@ img {
     display: none;
     overflow: hidden;
     
-    background-color: purple;
+    background-image: url('/assets/kitchenBackground.png');
+    background-size: cover;
     height: 500px;
     width: 800px;
 }
@@ -153,9 +165,10 @@ img {
 
 
 #collectingCharacter {
-    width: 90px;
-    height: 90px;
-    background-color: white;
+    width: 150px;
+    height: 150px;
+    background-image: url('/assets/dogBaking.png');
+    background-size: cover;
     position: relative;
     top: 500px;
     left: 150px;
@@ -165,8 +178,7 @@ img {
 #collectingObstacle1 {
     width: 60px;
     height: 60px;
-    background-color: red;
-    /* background-image: url('/assets/jumpingObstacle1.png'); */
+    background-image: url('/assets/eggIngredient.png');
     background-size: cover;
     position: relative;
     top: 500px;
@@ -311,4 +323,14 @@ img {
 #outfitLeft {
     top: 300px;
     left: 200px;
+}
+
+#outfitFinishButton {
+    width: 110px;
+    height: 110px;
+    background-color: white;
+    position: absolute;
+    top: 375px;
+    left: 675px;
+    cursor: pointer;
 }
