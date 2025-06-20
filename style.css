@@ -36,7 +36,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
-    background-image: url('/assets/startScreenBackground.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/startScreenBackground.png');
     background-size: cover;
 
     background-color: blue;
@@ -73,7 +73,7 @@ p {
     transform: translate(-50%, -50%);
     display: none;
 
-    background-image: url('/assets/menuScreen.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/menuScreen.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -133,7 +133,7 @@ p {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/fieldBackground.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/fieldBackground.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -158,7 +158,7 @@ img {
 #jumpingObstacle1 {
     width: 60px;
     height: 60px;
-    background-image: url('/assets/poisonIvy.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/poisonIvy.png');
     background-size: cover;
     position: relative;
     top: 350px;
@@ -192,7 +192,7 @@ img {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/winCake.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/winCake.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -207,7 +207,7 @@ img {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/kitchenBackground.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/kitchenBackground.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -218,7 +218,7 @@ img {
 #collectingCharacter {
     width: 150px;
     height: 150px;
-    background-image: url('/assets/dogBaking.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/dogBaking.png');
     background-size: cover;
     position: relative;
     top: 500px;
@@ -229,7 +229,7 @@ img {
 #collectingObstacle1 {
     width: 60px;
     height: 60px;
-    background-image: url('/assets/eggIngredient.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/eggIngredient.png');
     background-size: cover;
     position: relative;
     top: 500px;
@@ -252,7 +252,7 @@ img {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/giftBackground.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/giftBackground.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -261,7 +261,7 @@ img {
 #giftBasket {
     width: 300px;
     height: 300px;
-    background-image: url('/assets/giftBox1.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/giftBox1.png');
     background-size: cover;
     position: relative;
     top: 170px;
@@ -280,32 +280,32 @@ img {
     top: 150px;
     left: 560px;
     cursor: grab;
-    background-image: url('/assets/gift1.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/gift1.png');
 
 }
 
 #giftItem2 {
     top: 270px;
     left: 560px;
-    background-image: url('/assets/gift2.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/gift2.png');
 }
 
 #giftItem3 {
     top: 390px;
     left: 560px;
-    background-image: url('/assets/gift3.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/gift3.png');
 }
 
 #giftItem4 {
     top: 200px;
     left: 670px;
-    background-image: url('/assets/gift4.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/gift4.png');
 }
 
 #giftItem5 {
     top: 330px;
     left: 670px;
-    background-image: url('/assets/gift5.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/gift5.png');
 }
 
 
@@ -319,7 +319,7 @@ img {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/outfitBackground.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/outfitBackground.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -328,7 +328,7 @@ img {
 #baseCharacter {
     width: 300px;
     height: 400px;
-    background-image: url('/assets/base.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/base.png');
     background-size: cover;
     position: fixed;
     top: 250px;
@@ -339,7 +339,7 @@ img {
 #hatSelection {
     width: 300px;
     height: 400px;
-    background-image: url('/assets/hat1.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/hat1.png');
     background-size: cover;
     position: fixed;
     top: 250px;
@@ -350,7 +350,7 @@ img {
 #outfitSelection {
     width: 300px;
     height: 400px;
-    background-image: url('/assets/shirt1.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/shirt1.png');
     background-size: cover;
     position: fixed;
     top: 250px;
@@ -370,31 +370,31 @@ img {
 #hatRight {
     top: 100px;
     left: 600px;
-    background-image: url('/assets/nextButton.png')
+    background-image: url('https://kwong09.github.io/puppy-party/assets/nextButton.png')
 }
 
 #hatLeft {
     top: 100px;
     left: 200px;
-    background-image: url('/assets/backButton.png')
+    background-image: url('https://kwong09.github.io/puppy-party/assets/backButton.png')
 }
 
 #outfitRight {
     top: 300px;
     left: 600px;
-    background-image: url('/assets/nextButton.png')
+    background-image: url('https://kwong09.github.io/puppy-party/assets/nextButton.png')
 }
 
 #outfitLeft {
     top: 300px;
     left: 200px;
-    background-image: url('/assets/backButton.png')
+    background-image: url('https://kwong09.github.io/puppy-party/assets/backButton.png')
 }
 
 #outfitFinishButton {
     width: 110px;
     height: 110px;
-    background-image: url('/assets/allDoneDog.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/allDoneDog.png');
     background-size: cover;
     position: absolute;
     top: 375px;
@@ -414,7 +414,7 @@ img {
     display: none;
     overflow: hidden;
     
-    background-image: url('/assets/outfitInstructions.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/outfitInstructions.png');
     background-size: cover;
     height: 500px;
     width: 800px;
@@ -428,7 +428,7 @@ img {
     left: 720px;
     top: 375px;
 
-    background-image: url('/assets/nextButton.png');
+    background-image: url('https://kwong09.github.io/puppy-party/assets/nextButton.png');
     background-size: cover;
     cursor: pointer;
 }

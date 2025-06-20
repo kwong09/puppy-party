@@ -11,7 +11,7 @@ var jumpingObstacle1 = document.getElementById("jumpingObstacle1");
 
 var collectingCharacter = document.getElementById("collectingCharacter");
 var collectingObstacle1 = document.getElementById("collectingObstacle1");
-var ingredientList = ["/assets/eggIngredient.png", "/assets/flourIngredient.png", "/assets/milkIngredient.png", "/assets/saltIngredient.png", "/assets/butterIngredient.png"];
+var ingredientList = ["https://kwong09.github.io/puppy-party/assets/eggIngredient.png", "https://kwong09.github.io/puppy-party/assets/flourIngredient.png", "https://kwong09.github.io/puppy-party/assets/milkIngredient.png", "https://kwong09.github.io/puppy-party/assets/saltIngredient.png", "https://kwong09.github.io/puppy-party/assets/butterIngredient.png"];
 var ingredientOrder = 0;
 
 let giftOrder = 0;
@@ -45,34 +45,34 @@ let completedGames = 0;
 let currentGame = "bobross";
 
 jumpingStartButton.addEventListener('click', () => {
-    instructionsScreen.style.backgroundImage = 'url(/assets/jumpingInstructions.png)';
+    instructionsScreen.style.backgroundImage = 'url(https://kwong09.github.io/puppy-party/assets/jumpingInstructions.png)';
     currentGame = "jumping game";
-    winScreen.style.backgroundImage = "url('/assets/endScreen.png')";
+    winScreen.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/endScreen.png')";
     invisible(menuScreen);
     invisible(menuButton);
     visible(instructionsScreen);
 })
 
 collectingStartButton.addEventListener('click', () => {
-    instructionsScreen.style.backgroundImage = 'url(/assets/collectingInstructions.png)';
+    instructionsScreen.style.backgroundImage = 'url(https://kwong09.github.io/puppy-party/assets/collectingInstructions.png)';
     currentGame = "collecting game";
-    winScreen.style.backgroundImage = "url('/assets/winCake.png')";
+    winScreen.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/winCake.png')";
     invisible(menuScreen);
     visible(instructionsScreen);
 })
 
 outfitStartButton.addEventListener('click', () => {
-    instructionsScreen.style.backgroundImage = 'url(/assets/outfitInstructions.png)';
+    instructionsScreen.style.backgroundImage = 'url(https://kwong09.github.io/puppy-party/assets/outfitInstructions.png)';
     currentGame = "outfit game";
-    winScreen.style.backgroundImage = "url('/assets/winOutfit.png')";
+    winScreen.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/winOutfit.png')";
     invisible(menuScreen);
     visible(instructionsScreen);
 })
 
 giftStartButton.addEventListener('click', () => {
-    instructionsScreen.style.backgroundImage = 'url(/assets/giftInstructions.png)';
+    instructionsScreen.style.backgroundImage = 'url(https://kwong09.github.io/puppy-party/assets/giftInstructions.png)';
     currentGame = "gift game";
-    winScreen.style.backgroundImage = "url('/assets/winGift.png')";
+    winScreen.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/winGift.png')";
     invisible(menuScreen);
     visible(instructionsScreen);
 })
@@ -189,7 +189,7 @@ function visible(screen) {
 
             if (collectingScore >= 15) {
                 completedGames++;
-                collectingStartButton.src = "/assets/cakeUnlock.png";
+                collectingStartButton.src = "https://kwong09.github.io/puppy-party/assets/cakeUnlock.png";
 
                 invisible(collectingGameScreen);
                 visible(winScreen);
@@ -298,7 +298,7 @@ function draggingItem(giftItem) {
                 giftItemBoundary.bottom > giftBasketBoundary.top) {
                 invisible(giftItem);
                 giftOrder++;
-                giftBasket.style.backgroundImage = "url(/assets/" + giftList[giftOrder] + ".png)";
+                giftBasket.style.backgroundImage = "url(https://kwong09.github.io/puppy-party/assets/" + giftList[giftOrder] + ".png)";
 
 
                 if (giftOrder === 1) {
@@ -321,7 +321,7 @@ function draggingItem(giftItem) {
                 if (giftOrder > 4) {
                     setTimeout(() => {
                         completedGames++;
-                        giftStartButton.src = "/assets/giftUnlock.png";
+                        giftStartButton.src = "https://kwong09.github.io/puppy-party/assets/giftUnlock.png";
 
                         invisible(clickDragGameScreen);
                         visible(winScreen);
@@ -344,11 +344,11 @@ function outfitGameButtons(button) {
         if (outfitOrder >= 3) {
             outfitOrder = 0;
             let outfitSelected = outfitList[outfitOrder];
-            outfitSelection.style.backgroundImage = "url('/assets/" + outfitSelected + ".png')";
+            outfitSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + outfitSelected + ".png')";
         } else {
             outfitOrder++;
             let outfitSelected = outfitList[outfitOrder];
-            outfitSelection.style.backgroundImage = "url('/assets/" + outfitSelected + ".png')";
+            outfitSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + outfitSelected + ".png')";
         }
     }
 
@@ -356,11 +356,11 @@ function outfitGameButtons(button) {
         if (outfitOrder <= 0) {
             outfitOrder = 3;
             let outfitSelected = outfitList[outfitOrder];
-            outfitSelection.style.backgroundImage = "url('/assets/" + outfitSelected + ".png')";
+            outfitSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + outfitSelected + ".png')";
         } else {
             outfitOrder--;
             let outfitSelected = outfitList[outfitOrder];
-            outfitSelection.style.backgroundImage = "url('/assets/" + outfitSelected + ".png')";
+            outfitSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + outfitSelected + ".png')";
         }
     }
 
@@ -368,11 +368,11 @@ function outfitGameButtons(button) {
         if (hatOrder >= 3) {
             hatOrder = 0;
             let hatSelected = hatList[hatOrder];
-            hatSelection.style.backgroundImage = "url('/assets/" + hatSelected + ".png')";
+            hatSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + hatSelected + ".png')";
         } else {
             hatOrder++;
             let hatSelected = hatList[hatOrder];
-            hatSelection.style.backgroundImage = "url('/assets/" + hatSelected + ".png')";
+            hatSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + hatSelected + ".png')";
         }
     }
 
@@ -380,11 +380,11 @@ function outfitGameButtons(button) {
         if (hatOrder <= 0) {
             hatOrder = 3;
             let hatSelected = hatList[hatOrder];
-            hatSelection.style.backgroundImage = "url('/assets/" + hatSelected + ".png')";
+            hatSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + hatSelected + ".png')";
         } else {
             hatOrder--;
             let hatSelected = hatList[hatOrder];
-            hatSelection.style.backgroundImage = "url('/assets/" + hatSelected + ".png')";
+            hatSelection.style.backgroundImage = "url('https://kwong09.github.io/puppy-party/assets/" + hatSelected + ".png')";
         }
     }
 };
