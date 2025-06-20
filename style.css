@@ -36,23 +36,34 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     display: block;
+    background-image: url('/assets/startScreenBackground.png');
+    background-size: cover;
 
     background-color: blue;
     height: 500px;
     width: 800px;
 }
 
-#startButton, #menuButton {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+#startButton {
+    height: 50px;
+    width: auto;
+    position: fixed;
+    top: 30%;
+    left: 325px;
     cursor: pointer;
 
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    animation: floatingAni2 2s infinite ease-in-out;
+}
+
+#menuButton {
+    height: 50px;
+    width: auto;
+    position: fixed;
+    top: 80%;
+    left: 70px;
+    cursor: pointer;
+
+    animation: floatingAni2 2s infinite ease-in-out;
 }
 
 .menuScreen {
@@ -62,18 +73,56 @@ p {
     transform: translate(-50%, -50%);
     display: none;
 
-    background-color: lavender;
+    background-image: url('/assets/menuScreen.png');
+    background-size: cover;
     height: 500px;
     width: 800px;
 }
 
 .menuScreen img {
-    height: 60px;
-    width: 60px;
+    height: 110px;
+    width: 110px;
     cursor: pointer;
-    position: fixed;
+    position: absolute;
+    transform: translateX(-100px);
 
     top: 200px;
+    animation: floatingAni1 2s ease-in-out infinite;
+}
+
+#jumpingStartButton {
+    height: 90px;
+    width: auto;
+    left: 275px;
+
+    animation: floatingAni2 2s infinite ease-in-out;
+    
+    display: none;
+    top: 400px;
+}
+
+#outfitStartButton {
+    left: 25%;
+}
+
+#giftStartButton {
+    left: 50%;
+}
+
+#collectingStartButton {
+    left: 75%
+}
+
+@keyframes floatingAni1 {
+    0%{transform: translate(-50px, 0px);}
+    50%{transform: translate(-50px, -10px);}
+    100%{transform: translate(-50px, 0px);}
+}
+
+@keyframes floatingAni2 {
+    0%{transform: translateY(0px);}
+    50%{transform: translateY(-10px);}
+    100%{transform: translateY(0px);}
 }
 
 .jumpingGameScreen {
@@ -109,7 +158,7 @@ img {
 #jumpingObstacle1 {
     width: 60px;
     height: 60px;
-    background-image: url('/assets/jumpingObstacle1.png');
+    background-image: url('/assets/poisonIvy.png');
     background-size: cover;
     position: relative;
     top: 350px;
@@ -143,7 +192,8 @@ img {
     display: none;
     overflow: hidden;
     
-    background-color: greenyellow;
+    background-image: url('/assets/winCake.png');
+    background-size: cover;
     height: 500px;
     width: 800px;
 }
@@ -202,7 +252,8 @@ img {
     display: none;
     overflow: hidden;
     
-    background-color: blanchedalmond;
+    background-image: url('/assets/giftBackground.png');
+    background-size: cover;
     height: 500px;
     width: 800px;
 }
@@ -210,7 +261,8 @@ img {
 #giftBasket {
     width: 300px;
     height: 300px;
-    background-color: white;
+    background-image: url('/assets/giftBox1.png');
+    background-size: cover;
     position: relative;
     top: 170px;
     left: 100px;
@@ -220,35 +272,40 @@ img {
     width: 90px;
     height: 90px;
     position: absolute;
-    background-color: pink;
     cursor: not-allowed;
+    background-size: cover;
 }
 
 #giftItem1 {
     top: 150px;
     left: 560px;
     cursor: grab;
+    background-image: url('/assets/gift1.png');
 
 }
 
 #giftItem2 {
     top: 270px;
     left: 560px;
+    background-image: url('/assets/gift2.png');
 }
 
 #giftItem3 {
     top: 390px;
     left: 560px;
+    background-image: url('/assets/gift3.png');
 }
 
 #giftItem4 {
     top: 200px;
     left: 670px;
+    background-image: url('/assets/gift4.png');
 }
 
 #giftItem5 {
     top: 330px;
     left: 670px;
+    background-image: url('/assets/gift5.png');
 }
 
 
@@ -262,7 +319,8 @@ img {
     display: none;
     overflow: hidden;
     
-    background-color: gainsboro;
+    background-image: url('/assets/outfitBackground.png');
+    background-size: cover;
     height: 500px;
     width: 800px;
 }
@@ -270,7 +328,8 @@ img {
 #baseCharacter {
     width: 300px;
     height: 400px;
-    background-color: white;
+    background-image: url('/assets/base.png');
+    background-size: cover;
     position: fixed;
     top: 250px;
     left: 400px;
@@ -280,7 +339,8 @@ img {
 #hatSelection {
     width: 300px;
     height: 400px;
-    background-color: pink;
+    background-image: url('/assets/hat1.png');
+    background-size: cover;
     position: fixed;
     top: 250px;
     left: 400px;
@@ -290,7 +350,8 @@ img {
 #outfitSelection {
     width: 300px;
     height: 400px;
-    background-color: floralwhite;
+    background-image: url('/assets/shirt1.png');
+    background-size: cover;
     position: fixed;
     top: 250px;
     left: 400px;
@@ -300,36 +361,41 @@ img {
 #hatRight, #hatLeft, #outfitRight, #outfitLeft {
     width: 50px;
     height: 50px;
-    background-color: red;
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
+    background-size: cover;
 }
 
 #hatRight {
     top: 100px;
     left: 600px;
+    background-image: url('/assets/nextButton.png')
 }
 
 #hatLeft {
     top: 100px;
     left: 200px;
+    background-image: url('/assets/backButton.png')
 }
 
 #outfitRight {
     top: 300px;
     left: 600px;
+    background-image: url('/assets/nextButton.png')
 }
 
 #outfitLeft {
     top: 300px;
     left: 200px;
+    background-image: url('/assets/backButton.png')
 }
 
 #outfitFinishButton {
     width: 110px;
     height: 110px;
-    background-color: white;
+    background-image: url('/assets/allDoneDog.png');
+    background-size: cover;
     position: absolute;
     top: 375px;
     left: 675px;

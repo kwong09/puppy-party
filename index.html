@@ -13,13 +13,14 @@
 
 <body>
     <div class="homeScreen">
-        <button onclick="invisible(homeScreen); visible(menuScreen)" id="startButton">Start</button>
+        <img src="/assets/startButton.png" onclick="invisible(homeScreen); visible(menuScreen)" id="startButton">
+        <p style="color: antiquewhite; left: 775px; top: 425px; cursor: pointer" onclick="alert(`Help Benson the dog prepare for his friend's birthday party!`)">?</p>
     </div>
     <div class="menuScreen">
-        <img src="/assets/jumpingObstacle1.png" id="jumpingStartButton">
-        <button id="outfitStartButton">outfit</button>
-        <button onclick="invisible(menuScreen); visible(instructionsScreen)" id="collectingStartButton">cake</button>
-        <button onclick="invisible(menuScreen); visible(instructionsScreen)" id="giftStartButton">gift</button>
+        <img src="/assets/jumpingButton.png" id="jumpingStartButton">
+        <img src="/assets/outfitLock.png" id="outfitStartButton">
+        <img src="/assets/cakeLock.png" id="collectingStartButton">
+        <img src="/assets/giftLock.png" id="giftStartButton">
     </div>
     <div class="jumpingGameScreen" onclick="jumpingCharacterAni(jumpingCharacter)">
         <div>
@@ -55,11 +56,11 @@
             <div id="hatLeft" onclick="outfitGameButtons('hatLeft')"></div>
             <div id="outfitRight" onclick="outfitGameButtons('outfitRight')"></div>
             <div id="outfitLeft" onclick="outfitGameButtons('outfitLeft')"></div>
-            <div id="outfitFinishButton" onclick="visible(winScreen); invisible(outfitGameScreen)"></div>
+            <div id="outfitFinishButton" onclick="visible(winScreen); invisible(outfitGameScreen); completedGames++; outfitStartButton.src = '/assets/outfitUnlock.png'";></div>
         </div>
     </div>
     <div class="winScreen">
-        <button onclick="invisible(winScreen); visible(menuScreen)" id="menuButton">menu</button>
+        <img src="/assets/menuButton.png" onclick="invisible(winScreen); visible(menuScreen)" id="menuButton">
     </div>
     <div class="instructionsScreen">
         <div id="nextButton"></div>
